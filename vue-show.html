@@ -10,7 +10,8 @@
         You must enter a message
     </span>
     <textarea v-model="message"></textarea>
-    <button type="submit">Send Message</button>
+    <button type="submit" v-show="message">Send Message</button>
+    <!--<button type="submit" v-if="message">Send Message</button>-->
     <pre>{{ $data | json }}</pre>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
