@@ -1,3 +1,4 @@
-# bootcamp-vue
+# Learning Vue 1.0: Step By Step
 
-* Learning Vue 1.0: Step By Step: Hello Databinding
+* [Hello Databinding](https://github.com/m0neyball/bootcamp-vue/tree/hello-databinding)
+* [Vue Show](https://github.com/m0neyball/bootcamp-vue/tree/vue-show)
