@@ -6,8 +6,16 @@
 </head>
 <body>
     <div id="app">
-
+        <h1>{{ message }}</h1>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello vue.js'
+            }
+        });
+    </script>
 </body>
 </html>
