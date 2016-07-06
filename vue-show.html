@@ -6,7 +6,7 @@
 </head>
 <body>
 <div id="app">
-    <span class="error">
+    <span class="error" v-show="!message">
         You must enter a message
     </span>
     <textarea v-model="message"></textarea>
