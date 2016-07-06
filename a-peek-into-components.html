@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <counter subject="Likes"></counter>
+    <counter subject="Dislikes"></counter>
+    <template id="counter-template">
+        <h1>{{ subject }}</h1>
+        <button @click="count += 1">{{ count }}</button>
+    </template>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        components: {
+            counter: {
+                template: '#counter-template',
+                props: ['subject'],
+                data: function () {
+                    return { count: 0 }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
