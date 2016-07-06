@@ -6,10 +6,10 @@
 </head>
 <body>
 <div id="app">
-    <counter></counter>
-    <counter></counter>
+    <counter subject="Likes"></counter>
+    <counter subject="Dislikes"></counter>
     <template id="counter-template">
-        <h1>Hello world</h1>
+        <h1>{{ subject }}</h1>
         <button @click="count += 1">{{ count }}</button>
     </template>
 </div>
@@ -17,6 +17,7 @@
 <script>
     Vue.component('counter', {
         template: '#counter-template',
+        props: ['subject'],
         data: function () {
             return { count: 0 }
         }
