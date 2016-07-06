@@ -17,8 +17,9 @@
     new Vue({
         el: '#app',
         methods: {
-            handleIt: function () {
+            handleIt: function (e) {
                 alert('v-on:submit');
+                e.preventDefault();
             }
         }
     });
