@@ -7,11 +7,16 @@
 <body>
 <div id="app">
     <counter></counter>
+    <counter></counter>
+    <template id="counter-template">
+        <h1>Hello world</h1>
+        <button>Increment</button>
+    </template>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 <script>
     Vue.component('counter', {
-        template: '<h1>Hello World</h1>'
+        template: '#counter-template'
     });
     new Vue({
         el: '#app'
