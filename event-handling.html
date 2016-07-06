@@ -6,7 +6,7 @@
 </head>
 <body>
 <div id="app">
-    <form action="done.html">
+    <form action="done.html" v-on:submit="handleIt">
         <button type="submit">
             Submit Me!
         </button>
@@ -14,7 +14,14 @@
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 <script>
-
+    new Vue({
+        el: '#app',
+        methods: {
+            handleIt: function () {
+                alert('v-on:submit');
+            }
+        }
+    });
 </script>
 </body>
 </html>
