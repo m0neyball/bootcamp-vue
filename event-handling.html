@@ -6,14 +6,22 @@
 </head>
 <body>
 <div id="app">
-    <button type="submit">
+    <button type="submit" @click="count += 1">
         Increment Counter: {{ count }}
     </button>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 <script>
     new Vue({
-        el: '#app'
+        el: '#app',
+        data: {
+            count: 0
+        },
+        methods: {
+            incrementCount: function () {
+                this.count += 1;
+            }
+        }
     });
 </script>
 </body>
