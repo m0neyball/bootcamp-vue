@@ -6,7 +6,9 @@
 </head>
 <body>
 <div id="app">
-    <h1>{{ first }} {{ last }}</h1>
+    <h1>{{ fullName }}</h1>
+    <input type="text" v-model="first" placeholder="First Name">
+    <input type="text" v-model="last" placeholder="Last Name">
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 <script>
@@ -15,8 +17,13 @@
         data: {
             first: 'fox',
             last: 'hsiao',
-            fullName: `${this.first} ${this.last}`
+            fullName: `fox hsiao`
         },
+        watch: {
+            first: function (first) {
+                this.fullName = `${this.first} ${this.last}`
+            }
+        }
     });
 </script>
 </body>
