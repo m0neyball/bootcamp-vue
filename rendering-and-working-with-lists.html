@@ -10,7 +10,11 @@
 <body>
 <div id="app">
     <ul>
-        <li :class="['one', 'two', 'third']" v-for="task in tasks">{{ task.body }}</li>
+        <li :class="{ 'completed': task.completed }"
+            v-for="task in tasks"
+        >
+            {{ task.body }}
+        gi</li>
     </ul>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
