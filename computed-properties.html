@@ -6,26 +6,17 @@
 </head>
 <body>
 <div id="app">
-    <h1>Skill : {{ skill }}</h1>
-    <input type="text" v-model="point">
+    <h1>{{ first }} {{ last }}</h1>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: {
-            point: 50,
+            first: 'fox',
+            last: 'hsiao',
+            fullName: `${this.first} ${this.last}`
         },
-        computed: {
-            skill: function () {
-
-                if (this.point <= 100){
-                    return 'Beginner';
-                }
-
-                return 'Advanced';
-            }
-        }
     });
 </script>
 </body>
