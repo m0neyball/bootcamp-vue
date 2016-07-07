@@ -1,10 +1,10 @@
 new Vue({
   el: '#app',
   data: {
-    tasks : [
-      'Go to the store',
-      'Go to the bank',
-      'Go to the doctor',
+    tasks: [
+      { body: 'Go to the store', completed: false },
+      { body: 'Go to the bank', completed: false },
+      { body: 'Go to the doctor', completed: true }
     ]
   }
 });
