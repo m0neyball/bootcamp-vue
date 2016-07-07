@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h1>{{ fullName }}</h1>
+    <input type="text" v-model="first" placeholder="First Name">
+    <input type="text" v-model="last" placeholder="Last Name">
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            first: 'fox',
+            last: 'hsiao',
+            fullName: `fox hsiao`
+        },
+        computed: {
+            fullName: function () {
+                return `${this.first} ${this.last}`;
+            }
+        }
+    });
+</script>
+</body>
+</html>
