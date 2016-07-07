@@ -19,9 +19,9 @@
             last: 'hsiao',
             fullName: `fox hsiao`
         },
-        watch: {
-            first: function (first) {
-                this.fullName = `${this.first} ${this.last}`
+        computed: {
+            fullName: function () {
+                return `${this.first} ${this.last}`;
             }
         }
     });
