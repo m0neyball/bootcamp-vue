@@ -12,6 +12,7 @@
     <tasks :list="tasks"></tasks>
 </div>
 <template id="tasks-template">
+    <h1>My Tasks ({{ remaining }})</h1>
     <ul>
         <li :class="{ 'completed': task.completed }"
             v-for="task in list"
