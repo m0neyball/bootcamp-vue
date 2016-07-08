@@ -8,3 +8,4 @@
 * [Subscription Plans Exercise](https://github.com/m0neyball/bootcamp-vue/tree/subscription-plans-exercise)
 * [Rendering and Working With Lists](https://github.com/m0neyball/bootcamp-vue/tree/rendering-and-working-with-lists)
 * [Custom Components 101](https://github.com/m0neyball/bootcamp-vue/tree/custom-components-101)
+* [Vue Makes it so Easy](https://github.com/m0neyball/bootcamp-vue/tree/vue-makes-it-so-easy)
