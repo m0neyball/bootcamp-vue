@@ -1,11 +1,23 @@
 Vue.component('tasks', {
   props: ['list'],
   template: '#tasks-template',
+
   computed: {
     remaining: function () {
+      var vm = this;
+
       return this.list.filter(function (task) {
-        return ! task.completed;
+        return ! vm.isInProgresse(task);
       }).length;
+    }
+  },
+
+  methods: {
+    isCompleated: function (task) {
+      return task.completed;
+    },
+    isInProgresse: function (task) {
+      return ! this.isCompleated(task);
     }
   }
 });
