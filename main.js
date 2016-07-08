@@ -14,8 +14,13 @@ Vue.component('tasks', {
     isCompleated: function (task) {
       return task.completed;
     },
+
     inProgresse: function (task) {
       return ! this.isCompleated(task);
+    },
+
+    deleteTask: function (task) {
+      this.list.$remove(task);
     }
   }
 });

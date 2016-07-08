@@ -22,6 +22,8 @@
             @click="task.completed = ! task.completed"
         >
             {{ task.body }}
+
+            <strong @click="deleteTask(task)">x</strong>
         </li>
     </ul>
 </template>
