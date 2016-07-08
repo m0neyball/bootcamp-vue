@@ -16,7 +16,7 @@
         My Tasks
         <span v-show="remaining ">({{ remaining }})</span>
     </h1>
-    <ul>
+    <ul v-show="list.length">
         <li :class="{ 'completed': task.completed }"
             v-for="task in list"
             @click="task.completed = ! task.completed"
@@ -26,6 +26,7 @@
             <strong @click="deleteTask(task)">x</strong>
         </li>
     </ul>
+    <p v-else>No tasks yet!</p>
 </template>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
 <script src="main.js"></script>
