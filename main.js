@@ -1,3 +1,8 @@
+Vue.component('tasks', {
+  props: ['list'],
+  template: '#tasks-template'
+});
+
 new Vue({
   el: '#app',
   data: {
